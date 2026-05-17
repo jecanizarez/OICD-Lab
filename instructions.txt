@@ -1,2 +1,0 @@
-Integrate an application with OpenIDConnect using Google
-as IdP
