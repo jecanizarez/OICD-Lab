@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Making Web Apps</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .user-info img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+        .logout-btn {
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .ai-content {
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        .feature-box {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h2>🤖 AI Web Builder Labs</h2>
+        </div>
+        <div class="user-info">
+            <span>Welcome, <strong>{{ user.name }}</strong> ({{ user.email }})</span>
+            {% if user.picture %}
+            <img src="{{ user.picture }}" alt="Profile Picture">
+            {% endif %}
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>The Future of Web Development: AI Agents</h1>
+        
+        <div class="ai-content">
+            <p>Artificial Intelligence is revolutionizing how we create web applications. Gone are the days of manually typing every single line of boilerplate code. Today, AI agents can understand high-level architectural requirements and translate them into fully functional applications in minutes.</p>
+            
+            <div class="feature-box">
+                <strong>Did you know?</strong> This very application, complete with secure Google OpenID Connect integration, dependency management, and routing, was drafted, implemented, and version-controlled by an AI agent acting on simple user instructions.
+            </div>
+
+            <h3>How AI is Changing the Landscape</h3>
+            <ul>
+                <li><strong>Rapid Prototyping:</strong> Ideas can be turned into functional prototypes almost instantly, allowing for faster validation.</li>
+                <li><strong>Automated Integrations:</strong> Complex tasks like setting up OAuth2 flows, database connections, and CI/CD pipelines can be automated reliably.</li>
+                <li><strong>Continuous Refactoring:</strong> AI can analyze codebases to suggest structural improvements, fix bugs, and ensure consistency with best practices.</li>
+            </ul>
+
+            <p>As AI continues to evolve, the role of the developer will shift from writing syntax to designing systems and guiding AI orchestrators to build robust, scalable solutions.</p>
+        </div>
+    </div>
+
+</body>
+</html>
